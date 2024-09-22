@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <div id="sudoku-grid"></div>
+        <div class="buttons">
+            <button id="new-game-btn">Start New Game</button>
+            <button id="hint-btn">Hint</button>
+        </div>
+    </div>
+
+    <!-- Numpad Popup -->
+    <div id="numpad-popup" class="popup hidden">
+        <div class="popup-content">
+            <button class="close-btn" id="close-numpad">&times;</button>
+            <div class="numpad">
+                <!-- Numpad numbers will be generated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- New Game Popup -->
+    <div id="new-game-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+    </div>
+
+    <script src="generate_sudoku.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
