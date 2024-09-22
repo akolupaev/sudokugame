@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#new-game-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 0;
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+}
+
+.cell {
+    border: 1px solid #999;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.cell.selected {
+    background-color: #e0e0e0;
+}
+
+.cell.invalid {
+    color: red;
+}
+
+.cell .suggestions {
+    color: grey;
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup h2 {
+    color: #fff;
+}
+
+.popup button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+#number-popup {
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+#number-popup button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.outer-grid {
+    border: 2px solid #000;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+.cell:nth-child(9n + 1) {
+    border-left: 2px solid #000;
+}
+
+.cell:nth-child(n + 1):nth-child(-n + 9) {
+    border-top: 2px solid #000;
+}
+
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+    border-bottom: 2px solid #000;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Start New Game Button -->
+    <button id="new-game-btn">Start New Game</button>
+
+    <!-- Sudoku Grid -->
+    <div id="sudoku-grid">
+        <!-- The grid cells will be generated dynamically by app.js -->
+    </div>
+
+    <!-- Difficulty Selection Popup -->
+    <div id="difficulty-popup" class="popup hidden">
+        <h2>Select Difficulty</h2>
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+
+    <!-- Number Selection Popup -->
+    <div id="number-popup" class="popup hidden">
+        <!-- Number buttons will be generated dynamically by app.js -->
+    </div>
+
+    <script src="generate_sudoku.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
