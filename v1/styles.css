@@ -1,0 +1,58 @@
+/* Basic styling for Sudoku grid */
+#sudoku-grid {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+#sudoku-grid td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+#sudoku-grid td.active {
+    background-color: #ddd;
+}
+
+#sudoku-grid td.invalid {
+    background-color: #ffcccc;
+}
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Number pad popup styling */
+#numpad {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+}
+
+#numpad button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+/* Disable button styling */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
