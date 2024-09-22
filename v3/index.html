@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="sudoku-grid">
+            <!-- 9x9 Grid Cells will be generated dynamically -->
+        </div>
+        <button id="new-game-btn">Start New Game</button>
+    </div>
+
+    <!-- Difficulty Selection Popup -->
+    <div id="difficulty-popup" class="popup">
+        <div class="popup-content">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+    </div>
+
+    <!-- Number Input Popup -->
+    <div id="number-input-popup" class="popup">
+        <div class="popup-content">
+            <div id="number-options">
+                <!-- Number buttons from 1 to 9 will be generated dynamically -->
+            </div>
+            <button id="close-number-popup">Cancel</button>
+        </div>
+    </div>
+
+    <script src="generate_sudoku.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
