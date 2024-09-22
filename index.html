@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sudoku-container">
+        <div id="sudoku-grid"></div>
+        <div id="controls">
+            <button id="new-game-btn">Start New Game</button>
+            <button id="hint-btn">Toggle Hint Mode</button>
+        </div>
+    </div>
+
+    <div id="difficulty-popup" class="popup">
+        <h2>Select Difficulty</h2>
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+
+    <div id="numpad-popup" class="popup">
+        <div class="numpad-grid">
+            <button class="numpad-btn">1</button>
+            <button class="numpad-btn">2</button>
+            <button class="numpad-btn">3</button>
+            <button class="numpad-btn">4</button>
+            <button class="numpad-btn">5</button>
+            <button class="numpad-btn">6</button>
+            <button class="numpad-btn">7</button>
+            <button class="numpad-btn">8</button>
+            <button class="numpad-btn">9</button>
+            <button class="numpad-btn clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <script src="generate_sudoku.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

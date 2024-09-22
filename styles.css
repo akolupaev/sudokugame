@@ -1,0 +1,98 @@
+:root {
+    --grid-size: min(90vw, 90vh);
+    --cell-size: calc(var(--grid-size) / 9);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, var(--cell-size));
+    grid-template-rows: repeat(9, var(--cell-size));
+    gap: 1px;
+    background-color: #000;
+    border: 2px solid #000;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--cell-size) * 0.6);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.cell.initial {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    cursor: default;
+}
+
+.cell.invalid {
+    color: red;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #000;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.numpad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.numpad-btn {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.hint {
+    color: #999;
+    font-size: calc(var(--cell-size) * 0.2);
+}
