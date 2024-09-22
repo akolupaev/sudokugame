@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.header {
+    margin: 20px;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    margin: 0 auto;
+    border: 2px solid #333;
+}
+
+.cell {
+    border: 1px solid #999;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.cell.prefilled {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #000;
+    cursor: default;
+}
+
+.cell.user-input {
+    color: #007BFF;
+}
+
+.cell.invalid {
+    color: red;
+}
+
+.cell.selected {
+    background-color: #d3d3d3;
+}
+
+.cell.hint {
+    color: grey;
+}
+
+#sudoku-grid .cell:nth-child(3n) {
+    border-right: 2px solid #333;
+}
+
+#sudoku-grid .cell:nth-child(n+19):nth-child(-n+27),
+#sudoku-grid .cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #333;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #333;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-gap: 10px;
+}
+
+.numpad-btn {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.difficulty-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
